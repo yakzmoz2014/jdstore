@@ -33,7 +33,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
-gem 'annotate'
+gem 'annotate'  #注释用
 gem 'carrierwave'
 gem 'mini_magick'
 

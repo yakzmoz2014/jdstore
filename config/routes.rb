@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  namespace :account do
+    resources :users
+  end
+  
   resources :products
 
   root 'welcome#index'
