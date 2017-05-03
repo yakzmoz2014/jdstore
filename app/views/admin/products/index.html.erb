@@ -1,4 +1,4 @@
-<h2> Product List </h2>
+<h2> 产品列表 </h2>
 <div class="pull-right" style="padding-bottom: 20px;">
   <%= link_to("新增产品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
 </div>
@@ -6,10 +6,10 @@
   <thead>
     <tr>
       <th>#</th>
-      <th width="220">Product Pic</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th width="100"> Options</th>
+      <th width="220">产品图片</th>
+      <th>产品名称</th>
+      <th>价格</th>
+      <th width="100"> 管理选项</th>
     </tr>
   </thead>
   <tbody>
@@ -34,7 +34,8 @@
           <%= product.price %>
         </td>
         <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
+          <%= link_to("Edit", edit_admin_product_path(product)) %> |
+          <%= link_to('Delete', admin_product_path(product), method: :delete, data: {confirm: "确定删除？"}) %>
         </td>
       </tr>
     <% end %>
