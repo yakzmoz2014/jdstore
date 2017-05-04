@@ -20,8 +20,9 @@
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
                 <li><%= link_to(content_tag(:i, "管理员选单", class: "fa fa-superpowers"), admin_products_path) %></li>
+                <li class="divider"></li>
               <% end %>
-              <li class="divider"></li>
+
               <li><%= link_to(content_tag(:i, "个人中心", class: "fa fa-user"), edit_account_user_path(current_user)) %></li>
               <li class="divider"></li>
               <li><%= link_to(content_tag(:i, "退出", class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
